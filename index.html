@@ -1,0 +1,46 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+    <body>
+        <center>
+            <div style="background-color: aqua; width: 300px; height: 300px; border-radius: 10px; box-shadow: 7px 7px; padding-top: 5px;">
+                    <h2>login form</h2>
+                <form action="practice1.html" method="GET">
+                    <div style="font-family: Arial, sans-serif; font-size: 20; ">
+                        <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="username"style="padding-right:5px; margin-bottom: 5px;"><br><br>
+                            
+                            <label for="password">Password:</label> 
+                            <input   type="password" id="password" placeholder="password"  style="padding-right: 5px; margin-bottom: 5px;"><br><br>
+                            
+                            
+                            <a href="#" class="forgot-password">forgot-password</a><br><br>
+                            <input type="submit" value="login">
+                            
+                        
+                    </div>
+                </form>
+            </div>
+        </center>
+
+        <script>
+            const loginForm = document.querySelector('form');
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+          
+            loginForm.addEventListener('submit', (e) => {
+              if (usernameInput.value.trim() === ''  || passwordInput.value.trim() === '') {
+
+                alert("Please fill all the table");
+                e.preventDefault();
+              } 
+            });
+          </script>
+    </body>
+</html> 
+
+
